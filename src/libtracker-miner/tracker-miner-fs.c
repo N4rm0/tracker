@@ -1617,7 +1617,7 @@ item_move (TrackerMinerFS *fs,
 	                               G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME ","
 	                               G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
 	                               G_FILE_ATTRIBUTE_STANDARD_TYPE,
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               NULL, NULL);
 
 	/* Get 'source' ID */

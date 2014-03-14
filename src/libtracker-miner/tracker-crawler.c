@@ -390,7 +390,7 @@ directory_root_info_new (GFile    *file,
 
 		file_info = g_file_query_info (file,
 		                               file_attributes,
-		                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+		                               G_FILE_QUERY_INFO_NONE,
 		                               NULL,
 		                               NULL);
 		g_object_set_qdata_full (G_OBJECT (file),
@@ -827,7 +827,7 @@ file_enumerate_children (TrackerCrawler          *crawler,
 
 	g_file_enumerate_children_async (ed->dir_file,
 	                                 attrs,
-	                                 G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                                 G_FILE_QUERY_INFO_NONE,
 	                                 G_PRIORITY_LOW,
 	                                 ed->cancellable,
 	                                 file_enumerate_children_cb,

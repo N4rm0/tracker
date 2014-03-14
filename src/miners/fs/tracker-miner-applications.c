@@ -868,7 +868,7 @@ miner_applications_process_file (TrackerMinerFS       *fs,
 
 	g_file_query_info_async (file,
 	                         attrs,
-	                         G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                         G_FILE_QUERY_INFO_NONE,
 	                         G_PRIORITY_DEFAULT,
 	                         cancellable,
 	                         process_file_cb,

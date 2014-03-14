@@ -331,7 +331,7 @@ handle_method_call_index_file (TrackerMinerFilesIndex *miner,
 
 	file_info = g_file_query_info (file,
 	                               G_FILE_ATTRIBUTE_STANDARD_TYPE,
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               NULL, NULL);
 
 	if (!file_info) {

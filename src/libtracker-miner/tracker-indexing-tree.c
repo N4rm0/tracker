@@ -660,7 +660,7 @@ tracker_indexing_tree_file_is_indexable (TrackerIndexingTree *tree,
 
 	if (file_type == G_FILE_TYPE_UNKNOWN)
 		file_type = g_file_query_file_type (file,
-		                                    G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+		                                    G_FILE_QUERY_INFO_NONE,
 		                                    NULL);
 
 	filter = (file_type == G_FILE_TYPE_DIRECTORY) ?

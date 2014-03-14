@@ -183,7 +183,7 @@ tracker_writeback_file_update_metadata (TrackerWriteback         *writeback,
 	                               G_FILE_ATTRIBUTE_UNIX_MODE ","
 	                               G_FILE_ATTRIBUTE_STANDARD_CONTENT_TYPE ","
 	                               G_FILE_ATTRIBUTE_ACCESS_CAN_WRITE,
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               NULL, NULL);
 
 	if (!file_info) {

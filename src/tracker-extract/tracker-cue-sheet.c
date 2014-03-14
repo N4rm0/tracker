@@ -317,7 +317,7 @@ find_local_cue_sheets (GFile *audio_file)
 
 	e = g_file_enumerate_children (container,
 	                               "standard::*",
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               NULL,
 	                               &error);
 

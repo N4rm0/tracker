@@ -2231,7 +2231,7 @@ miner_files_process_file (TrackerMinerFS       *fs,
 
 	g_file_query_info_async (file,
 	                         attrs,
-	                         G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                         G_FILE_QUERY_INFO_NONE,
 	                         G_PRIORITY_DEFAULT,
 	                         cancellable,
 	                         process_file_cb,
@@ -2353,7 +2353,7 @@ miner_files_process_file_attributes (TrackerMinerFS       *fs,
 
 	g_file_query_info_async (file,
 	                         attrs,
-	                         G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                         G_FILE_QUERY_INFO_NONE,
 	                         G_PRIORITY_DEFAULT,
 	                         cancellable,
 	                         process_file_attributes_cb,
@@ -2383,7 +2383,7 @@ miner_files_ignore_next_update_file (TrackerMinerFS       *fs,
 		G_FILE_ATTRIBUTE_TIME_ACCESS;
 
 	file_info = g_file_query_info (file, attrs,
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               cancellable, &error);
 
 	if (error) {
@@ -2799,7 +2799,7 @@ tracker_miner_files_is_file_eligible (TrackerMinerFiles *miner,
 
 	file_info = g_file_query_info (file,
 	                               G_FILE_ATTRIBUTE_STANDARD_TYPE,
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               NULL, NULL);
 
 	if (!file_info) {

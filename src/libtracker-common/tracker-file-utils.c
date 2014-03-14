@@ -883,7 +883,7 @@ tracker_file_is_hidden (GFile *file)
 
 	file_info = g_file_query_info (file,
 	                               G_FILE_ATTRIBUTE_STANDARD_IS_HIDDEN,
-	                               G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS,
+	                               G_FILE_QUERY_INFO_NONE,
 	                               NULL, NULL);
 	if (file_info) {
 		/* Check if GIO says the file is hidden */
